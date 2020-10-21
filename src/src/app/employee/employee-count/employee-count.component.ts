@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-employee-count',
@@ -6,16 +6,16 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./employee-count.component.css']
 })
 export class EmployeeCountComponent implements OnInit {
-
+  
   @Input()
-  all: number;
+    all: number;
   @Input()
     male: number;
-    @Input()
+  @Input()
     female: number;
 
-    // Holds the selected value of the radio button
-    selectedRadioButtonValue: string = 'All';
+  selectedRadioButtonValue: string = 'All';
+  
   constructor() { }
 
   ngOnInit(): void {
